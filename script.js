@@ -1,6 +1,5 @@
 'use strict';
 
-
 // document.querySelector('.message').textContent = 'Correct Number!'
 
 // document.querySelector('.number').textContent = 13;
@@ -38,6 +37,7 @@ document.querySelector('.check').addEventListener('click', function () {
     } else {
       document.querySelector('.message').textContent = "YOU LOST! TRASH, GET OUT AND NEVER GUESS HOW MANY DICKS I HAVE EVER AGAIN";
       document.querySelector('.score').textContent = 0;
+      document.querySelector('body').style.backgroundColor = '#ff4d4d';
     }
     //Guess too low
   } else if (guess < secretNumber) {
@@ -48,6 +48,7 @@ document.querySelector('.check').addEventListener('click', function () {
     } else {
       document.querySelector('.message').textContent = "YOU LOST! TRASH, GET OUT AND NEVER GUESS HOW MANY DICKS I HAVE EVER AGAIN";
       document.querySelector('.score').textContent = 0;
+      document.querySelector('body').style.backgroundColor = '#ff4d4d';
     }
   }
 })
