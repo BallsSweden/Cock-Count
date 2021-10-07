@@ -22,7 +22,7 @@ function widthNumber(width) {
 };
 
 //game logic
-document.querySelector('.check').addEventListener('click', function () {
+const gameLogic = function () {
   const guess = Number(document.querySelector('.guess').value);
   //No input
   if (!guess) {
@@ -48,6 +48,18 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.score').textContent = 0;
       backgroundColor('#ff4d4d');
     }
+  }
+}
+
+//check button
+document.querySelector('.check').addEventListener('click', function () {
+  gameLogic()
+})
+
+//key press
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Enter') {
+    gameLogic()
   }
 })
 
