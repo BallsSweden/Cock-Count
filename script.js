@@ -1,7 +1,10 @@
 'use strict';
 
-const randomGenerator = Math.trunc(Math.random() * 20) + 1;
-let secretNumber = randomGenerator;
+
+function randomGenerator() {
+  return Math.trunc(Math.random() * 20) + 1;
+}
+let secretNumber = randomGenerator();
 let score = 4;
 let highscore = 0;
 
@@ -65,7 +68,7 @@ document.addEventListener('keydown', function (e) {
 
 //reset button
 document.querySelector('.again').addEventListener('click', function () {
-  secretNumber = randomGenerator;
+  secretNumber = randomGenerator();
   score = 4;
   displayMessage('Start guessing Cock Count...');
   document.querySelector('.score').textContent = score;
